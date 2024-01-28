@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF = 8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>My portfolio - Sivajyothi B</title>
+    <link rel = "stylesheet" href="style.css">
+    <link rel = "stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id = "desktop-nav">
+        <div class = "logo">Sivajyothi B</div>
+        <div>
+            <ul class = "nav-links">
+                <li><a href = "#about">About</a></li>
+                <li><a href = "#Skills">Skills</a></li>
+                <li><a href = "#projects">Projects</a></li>
+                <li><a href = "#certificates">Certificates</a></li>
+                <li><a href = "#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id = "hamburger-nav">
+        <div class = "logo">Sivajyothi B</div>
+        <div class="hamburger_menu">
+            <div class="hamburger-icon" onclick = "toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class = "menu-links">
+                <ul>
+                    <li><a href = "#about" onclick = "toggleMenu()">About</a></li>
+                    <li><a href = "#Skills"onclick = "toggleMenu()">Skills</a></li>
+                    <li><a href = "#Projects" onclick = "toggleMenu()">Projects</a></li>
+                    <li><a href = "#certificates" onclick = "toggleMenu()">Certificates</a></li>
+                    <li><a href = "#contact" onclick = "toggleMenu()">Contact</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section_pic-container">
+            <img src="Me.png" alt="Sivajyothi B profile picture">
+        </div>
+        <div class = "section__text">
+            <p class = "section__text__p1">Hello, I'm</p>
+            <h1 class = "title">Sivajyothi B</h1>
+            <p class="section__text__p2">An aspiring Tech Enthusiast</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('Sivajyothi B - Resume.pdf')">Download Resume</button>
+                <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
+            </div>
+            <div id = "socials-container">
+                <img src = "linkedin.png" alt = "My LinkedIn profile"
+                class = "icon" onclick = "location.href='https://www.linkedin.com/in/sivajyothi-b-938b4024b/'">
+                <img src = "github.png" alt = "My Github"
+                class = "icon" onclick = "location.href='https://github.com/sivajyothi2004'">
+            </div>
+        </div>
+    </section>
+    <section id = "about">
+        <p class = "section__text__p1">Get to know more</p>
+        <h1 class = "title">About Me</h1>
+        <div class = "section-container">
+            <div class = "section__pic-container2">
+                <img src="about-pic.jpg" alt="Profile picture" class = "about-pic">
+            </div>
+            <div class = "about-details-container">
+                <div class = "about-containers">
+                    <div class = "details-container">
+                        <img src="st-icon.png" alt="student icon" class = "icon">
+                        <h3>Skills</h3>
+                        <p>Programming languages like <br>Python, Java, HTML and CSS; Prompt Engineering</p>
+                    </div>
+                    <div class = "details-container">
+                        <img src="education.png" alt="education icon" class = "icon">
+                        <h3>Education</h3>
+                        <p>Integrated Mtech CSE<br>Second year student at VIT-AP</p>
+                    </div>
+                </div>
+                <div class = "text-container">
+                    <p>
+                        I am currently pursuing an integrated Mtech CSE degree at VIT-AP University, where
+                        I study computer engineering and learn skills such as Java,
+                        Python, CSS, and HTML. I am passionate about applying my knowledge and skills to solve real-world problems and
+                        contribute to the advancement of technology and society.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id = "Skills">
+        <p class = "section__text__p1">Explore My</p>
+        <h1 class = "title">Skills</h1>
+        <div class = "skill-details-container">
+            <div class = "about-containers">
+                <div class = "details-container">
+                    <h2 class = "skill-sub-title">Frontend Web Development</h2>
+                    <div class = "article-container">
+                        <article>
+                            <img src="check mark.png"
+                             alt="skill icon"
+                             class = "icon">
+                             <div>
+                                <h3>HTML</h3>
+                                <p>Intermediate</p>
+                             </div>
+                        </article>
+                        <article>
+                            <img src="check mark.png"
+                             alt="skill icon"
+                             class = "icon">
+                             <div>
+                                <h3>CSS</h3>
+                                <p>Intermediate</p>
+                             </div>
+                        </article>
+                        <article>
+                            <img src="check mark.png"
+                             alt="skill icon"
+                             class = "icon">
+                             <div>
+                                <h3>JavaScript</h3>
+                                <p>Basic</p>
+                             </div>
+                        </article>
+                    </div>
+                </div>
+                <div class = "details-container">
+                    <h2 class = "skill-sub-title">Other Skills</h2>
+                    <div class = "article-container">
+                        <article>
+                            <img src="check mark.png"
+                             alt="skill icon"
+                             class = "icon">
+                             <div>
+                                <h3>Python</h3>
+                                <p>Intermediate</p>
+                             </div>
+                        </article>
+                        <article>
+                            <img src="check mark.png"
+                             alt="skill icon"
+                             class = "icon">
+                             <div>
+                                <h3>Java</h3>
+                                <p>Intermediate</p>
+                             </div>
+                        </article>
+                        <article>
+                            <img src="check mark.png"
+                             alt="skill icon"
+                             class = "icon">
+                             <div>
+                                <h3>Prompt<br> Engineering</h3>
+                                <p>Basic</p>
+                             </div>
+                        </article>
+                        <article>
+                            <img src="check mark.png"
+                             alt="skill icon"
+                             class = "icon">
+                             <div>
+                                <h3>Video Editing</h3>
+                                <p>Intermediate</p>
+                             </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id = "projects">
+        <p class = "section__text__p1">Browse My Recent</p>
+        <h1 class = "title">Projects</h1>
+        <div class = "experience-details-container">
+            <div class = "about-containers">
+            <div class = "details-container color-container">
+                <div class = "article-container">
+                    <img src="hangman.png"
+                     alt="project 1"
+                     class = "project-img">
+                     <h2 class = "skill-sub-title">Project One: The Hangman</h2>
+                     <div class = "btn-container">
+                        <button class = "btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/sivajyothi2004/My-projects/blob/main/hangman.py'">
+                            Github
+                        </button>
+                     </div>
+                </div>
+            </div>
+            <div class = "details-container color-container">
+                <div class = "article-container">
+                    <img src="snakegame.png"
+                     alt="project 2"
+                     class = "project-img">
+                     <h2 class = "skill-sub-title">Project Two: The Snake Game</h2>
+                     <div class = "btn-container">
+                        <button class = "btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/sivajyothi2004/My-projects/blob/main/snake_game.py'">
+                            Github
+                        </button>
+                     </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id = "certificates">
+        <p class = "section__text__p1">Browse My</p>
+        <h1 class = "title">Lisences and Ceritificates</h1>
+        <div class = "experience-details-container">
+            <div class = "about-containers">
+            <div class = "details-container color-container">
+                <div class = "article-container">
+                    <img src="linkedin.png"
+                     alt="ceritificates 1"
+                     class = "project-img">
+                     <h2 class = "experience-sub-title">Prompt Engineering</h2>
+                     <div class = "btn-container">
+                        <button class = "btn btn-color-2 project-btn"
+                        onclick="location.href='https://www.linkedin.com/learning/certificates/4b5a3e0a36038de3d11d5d12787da6c8828b44a277ff24916d134ff015363f9e'">
+                            Show Credential
+                        </button>
+                     </div>
+                </div>
+            </div>
+            <div class = "details-container color-container">
+                <div class = "article-container">
+                    <img src="web.png"
+                     alt="certificates 2"
+                     class = "project-img">
+                     <h2 class = "experience-sub-title">Web development</h2>
+                     <div class = "btn-container">
+                        <button class = "btn btn-color-2 project-btn"
+                        onclick="location.href='https://credsverse.com/credentials/0c1d0d66-6cd1-452c-a312-c9ce40586952'">
+                            Show Credential
+                        </button>
+                     </div>
+                </div>
+            </div>
+            <div class = "details-container color-container">
+                <div class = "article-container">
+                    <img src="linkedin.png"
+                     alt="certificates 3"
+                     class = "project-img">
+                     <h2 class = "experience-sub-title">OOP in Java</h2>
+                     <div class = "btn-container">
+                        <button class = "btn btn-color-2 project-btn"
+                        onclick="location.href='https://www.linkedin.com/learning/certificates/a0f46372d7107054bf44a16778100d33924f82006a1cae215ecf2abbbc8c56b6'">
+                            Show Credential
+                        </button>
+                     </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id = "contact">
+        <p class = "section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class = "contact-info-upper-container">
+            <div class = "contact-info-container">
+                <img src="mail-icon.png"
+                 alt="email icon"
+                 class = "icon contact-icon email-icon">
+                 <p><a href ="mailto:sivajyothib2004@gmail.com">sivajyothib2004@gmail.com</a></p>
+            </div>
+            <div class = "contact-info-container">
+                <img src="linkedin.png"
+                 alt="LinkedIn icon"
+                 class = "icon contact-icon">
+                 <p><a href ="https://www.linkedin.com/in/sivajyothi-b-938b4024b">LinkedIn</a></p>
+            </div>
+            <div class = "contact-info-container">
+                <img src="call.png"
+                 alt="Phone icon"
+                 class = "icon contact-icon">
+                 <p><a href ="tel: 9188453281">Phone</a></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class = "nav-links-container">
+                <ul>
+                    <li><a href = "#about" onclick = "toggleMenu()">About</a></li>
+                    <li><a href = "#Skills"onclick = "toggleMenu()">Skills</a></li>
+                    <li><a href = "#Projects" onclick = "toggleMenu()">Projects</a></li>
+                    <li><a href = "#contact" onclick = "toggleMenu()">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 Sivajyothi B. All Rights Reserved</p>
+    </footer>
+    <script src = "script.js"></script>
+</body>
+</html>

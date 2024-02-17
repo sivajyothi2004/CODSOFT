@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iPhone Calculator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: repeating-linear-gradient(
+        45deg,
+        #f0f0f0,
+        #f0f0f0 10px,
+        #ffffff 10px,
+        #ffffff 20px
+      );
+    }
+
+    h1 {
+      color: #333; 
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #calculator-container {
+      background-color: rgba(255, 255, 255, 0.9); 
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      max-width: 400px;
+    }
+
+    #calculator {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: right;
+    }
+
+    #display {
+      grid-column: span 4;
+      padding: 10px;
+      font-size: 2em;
+      color: #333;
+    }
+
+    button {
+      padding: 20px;
+      font-size: 1.5em;
+      border: none;
+      background-color: #2a2a2a;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    button.operator {
+      background-color: #ff9500;
+    }
+
+    button.operator:hover {
+      background-color: #d18400;
+    }
+
+    button.double {
+      grid-column: span 2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Calculator</h1>
+  <div id="calculator-container">
+    <div id="display">0</div>
+    <div id="calculator">
+      <button onclick="clearDisplay()" class="double">C</button>
+      <button onclick="operate('/')">/</button>
+      <button onclick="operate('*')">x</button>
+      <button onclick="clearDisplay()">⌫</button>
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="operate('-')">-</button>
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="operate('+')">+</button>
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="calculate()" class="operator">=</button>
+      <button onclick="appendToDisplay('0')" class="double">0</button>
+      <button onclick="operate('.')">.</button>
+    </div>
+  </div>
+  
+  <script>
+    let display = document.getElementById('display');
+    let currentInput = '';
+    let operator = '';
+    let result = 0;
+
+    function appendToDisplay(value) {
+      currentInput += value;
+      display.textContent = currentInput + operator;
+    }
+
+    function operate(op) {
+      if (currentInput !== '') {
+        if (operator !== '') {
+          calculate();
+        }
+        operator = op;
+        result = parseFloat(currentInput);
+        currentInput = '';
+        display.textContent = result + operator;
+      }
+    }
+
+    function calculate() {
+      if (currentInput !== '') {
+        switch (operator) {
+          case '+':
+            result += parseFloat(currentInput);
+            break;
+          case '-':
+            result -= parseFloat(currentInput);
+            break;
+          case '*':
+            result *= parseFloat(currentInput);
+            break;
+          case '/':
+            result /= parseFloat(currentInput);
+            break;
+        }
+        currentInput = '';
+        operator = '';
+        display.textContent = result;
+      }
+    }
+
+    function clearDisplay() {
+      display.textContent = '0';
+      currentInput = '';
+      operator = '';
+      result = 0;
+    }
+  </script>
+</body>
+</html>
